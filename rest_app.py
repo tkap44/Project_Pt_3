@@ -54,6 +54,6 @@ def user(user_id):
 # print("DB cleaned")
 
 
-app.run(host='127.0.0.1', debug=True, port=5001)
+app.run(host='127.0.0.1', debug=True, port=5000)
 
 
