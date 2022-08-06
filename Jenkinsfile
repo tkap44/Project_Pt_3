@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    tage('flask') {
+    stage('flask') {
       steps {
         sh 'pip install flask'
       }
