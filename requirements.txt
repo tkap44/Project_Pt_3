@@ -3,5 +3,4 @@ pymysql
 requests
 selenium
 datetime
-os
 signal
