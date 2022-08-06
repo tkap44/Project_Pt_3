@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('backend') {
       steps {
-        sh 'python3 rest_ap.py'
+        sh 'python3 rest_app.py'
       }
     }
     stage('frontend') {
