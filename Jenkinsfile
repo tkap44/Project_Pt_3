@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('flask') {
       steps {
-        sh 'pip install flask'
+        sh 'pip3 install flask'
       }
     }
     stage('backend') {
