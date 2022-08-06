@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    tage('flask') {
+      steps {
+        sh 'pip install flask'
+      }
+    }
     stage('backend') {
       steps {
         sh 'python3 rest_app.py'
