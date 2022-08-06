@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('flask') {
+    stage('dependencies') {
       steps {
         sh 'pip3 install -r requirements.txt'
       }
