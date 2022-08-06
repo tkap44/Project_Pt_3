@@ -7,7 +7,7 @@ cursor = conn.cursor()
 user_id = 2
 user_id = str(user_id)
 
-res = requests.post('http://127.0.0.1:5001/users/'+user_id, json={"name": "test"})
+res = requests.post('http://127.0.0.1:5000/users/'+user_id, json={"name": "test"})
 if res.ok:    # res.ok checks if the server response is okay, only then will the next thing happen. error 500 is not okay!!!
     print("POST request response:", res.json())
     res2 = requests.get('http://127.0.0.1:5001/users/'+user_id)
@@ -24,7 +24,7 @@ else:
     print(res.json())
 
 
-res = requests.delete('http://127.0.0.1:5001/users/'+user_id)
+res = requests.delete('http://127.0.0.1:5000/users/'+user_id)
 if res.ok:
     print(res.json())
 else:
