@@ -1,7 +1,15 @@
 from flask import Flask, request
 from db_connector import *
+import os
+import signal
 
 app = Flask(__name__)
+
+
+@app.route('/stop_server')
+def stop_server():
+    os.kill(os.getpid(), signal.SIGINT)
+    return 'Server stopped'
 
 
 @app.route('/users/<user_id>', methods=['GET', 'POST', 'DELETE'])
@@ -10,7 +18,6 @@ def user(user_id):
         try:
             name = get_name(user_id)
             return "<H1 id='user'>" + name + "</H1>"
-
         except:
             return "<H1 id='error'>" 'no such user:' + user_id + "</H1>"
 
