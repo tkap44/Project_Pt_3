@@ -8,12 +8,12 @@ pipeline {
     }
     stage('backend') {
       steps {
-        sh 'python3 rest_app.py'
+        sh 'nohup python3 rest_app.py&'
       }
     }
     stage('frontend') {
       steps {
-        sh 'python3 web_app.py'
+        sh 'nohup python3 web_app.py&'
       }
     }
     stage('backend testing') {
