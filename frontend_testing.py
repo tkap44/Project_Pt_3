@@ -12,6 +12,7 @@ try:
 
 except:
     print("No user by that ID")
+    raise "Error"
 
 driver.close()
 
