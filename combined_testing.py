@@ -33,6 +33,8 @@ if res.ok:    # res.ok checks if the server response is okay, only then will the
         except:
             print("No user by that ID")
             driver.close()
+            raise "Error"
+
 
 else:
     print(res.json())
