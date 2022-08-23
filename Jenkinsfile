@@ -28,7 +28,7 @@ pipeline {
     }
         stage('docker build') {
       steps {
-        sh 'docker build -t tkap44/pp3 .'
+        sh 'docker build -t tkap44/pp3:latest .'
       }
     }
         stage('docker push') {
