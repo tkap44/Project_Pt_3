@@ -26,5 +26,20 @@ pipeline {
         sh 'python3 clean_environment.py'
       }
     }
+        stage('docker build') {
+      steps {
+        sh 'docker build -t tkap44/pp3 .'
+      }
+    }
+        stage('docker push') {
+      steps {
+        sh 'docker push tkap44/pp3:latest'
+      }
+    }
+        stage('env') {
+      steps {
+        sh ''
+      }
+    }
   }
 }
